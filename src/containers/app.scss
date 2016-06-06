@@ -1,0 +1,82 @@
+@import "../themes/palette";
+
+html {
+  box-sizing: border-box;
+  font-family: $font-sans;
+  background-color: $body-bg;
+  font-family: $font-sans;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+
+  &:focus {
+    outline: 1px solid rgba(dodgerblue, 0.5);
+  }
+}
+
+.Header {
+  height: 60px;
+  width: 100%;
+  background-color: $indigo;
+  display: block;
+}
+
+.Header-Contents {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.Logo {
+  background-image: url("../images/logo.png");
+  text-indent: -99999px;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size: contain;
+  width: 250px;
+  height: 40px;
+  margin-top: 10px;
+  float: left;
+}
+
+.Navigation {
+  height: 60px;
+  float: right;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.Navigation-Link {
+  float: left;
+}
+
+.Link {
+  display: inline-block;
+  padding: 0 10px;
+  color: $body-bg;
+  text-decoration: none;
+  font-size: 18px;
+  height: 60px;
+  line-height: 60px;
+
+  &:hover {
+    background-color: $sky;
+  }
+}
+
+.Main-Section {
+  max-width: 1200px;
+  margin: 0 auto;
+}

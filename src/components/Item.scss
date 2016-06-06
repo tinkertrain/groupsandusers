@@ -1,0 +1,86 @@
+@import "../themes/palette";
+
+.Item {
+  background-color: lighten($steel-light, 20%);
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.isOpen.Item {
+  background-color: lighten(desaturate($sky-light, 25%), 52%);
+}
+
+.Item-Name {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.isOpen .Item-Name {
+  font-weight: 700;
+  background-color: desaturate($sky-light, 25%);
+  color: $white;
+}
+
+.Item-Info {
+  display: none;
+  margin-top: 20px;
+  padding: 0 10px 10px 10px;
+}
+
+.isOpen .Item-Info {
+  display: block;
+}
+
+.Item-Delete {
+  text-align: right;
+  margin: 20px 0;
+}
+
+.Items-List {
+  list-style: none;
+  padding: 0 10px 0 45px;
+  margin: 10px 0 30px 0;
+  width: 100%;
+
+  li {
+    border-bottom: 1px solid $steel-light;
+    overflow: hidden;
+    height: 35px;
+    line-height: 35px;
+  }
+}
+
+.Items-List-Name {
+  float: left;
+  font-size: 13px;
+}
+
+.Items-List-Remove {
+  float: right;
+  background-color: transparent;
+  color: $cranberry;
+}
+
+.Item-Empty {
+  text-align: center;
+  font-size: 13px;
+  margin: 20px 0;
+}
+
+.Items-List-NoEmpty {
+  text-align: center;
+  color: $cranberry;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.Dismiss-Button {
+  background-color: transparent;
+  color: $cranberry;
+  cursor: pointer;
+}

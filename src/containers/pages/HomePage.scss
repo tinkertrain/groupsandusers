@@ -1,0 +1,13 @@
+.Greeting-Big {
+  font-weight: 300;
+  font-size: 54px;
+}
+
+.Greeting-Big + p {
+  font-size: 24px;
+}
+
+.Home-Link {
+  display: inline-block;
+  margin-right: 10px;
+}

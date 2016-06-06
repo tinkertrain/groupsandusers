@@ -1,0 +1,29 @@
+@import "../../themes/palette";
+
+.Page-Title {
+  font-weight: 300;
+  font-size: 48px;
+
+  a {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: $indigo;
+    border-radius: 5px;
+    color: $white;
+    padding: 3px 5px;
+
+    &:hover {
+      background-color: $sky;
+    }
+  }
+}
+
+.Title-Name {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
