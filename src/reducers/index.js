@@ -5,22 +5,22 @@ import _ from 'lodash/fp';
 import cuid from 'cuid';
 
 let initialUserState = [
-  {
-    id: cuid.slug(),
-    name: 'John'
-  },
-  {
-    id: cuid.slug(),
-    name: 'Paul'
-  },
-  {
-    id: cuid.slug(),
-    name: 'George'
-  },
-  {
-    id: cuid.slug(),
-    name: 'Ringo'
-  }
+  // {
+  //   id: cuid.slug(),
+  //   name: 'John'
+  // },
+  // {
+  //   id: cuid.slug(),
+  //   name: 'Paul'
+  // },
+  // {
+  //   id: cuid.slug(),
+  //   name: 'George'
+  // },
+  // {
+  //   id: cuid.slug(),
+  //   name: 'Ringo'
+  // }
 ];
 
 function users(state = initialUserState, action) {
@@ -42,21 +42,21 @@ function users(state = initialUserState, action) {
 }
 
 let initialGroupState = [
-  {
-    id: cuid.slug(),
-    name: 'Super Group',
-    members: []
-  },
-  {
-    id: cuid.slug(),
-    name: 'Editors',
-    members: []
-  },
-  {
-    id: cuid.slug(),
-    name: 'Admins',
-    members: []
-  }
+  // {
+  //   id: cuid.slug(),
+  //   name: 'Super Group',
+  //   members: []
+  // },
+  // {
+  //   id: cuid.slug(),
+  //   name: 'Editors',
+  //   members: []
+  // },
+  // {
+  //   id: cuid.slug(),
+  //   name: 'Admins',
+  //   members: []
+  // }
 ];
 
 function groups(state = initialGroupState, action) {

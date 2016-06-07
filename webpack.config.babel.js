@@ -48,7 +48,7 @@ let common = {
       'node_modules',
       PATHS.src
     ],
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.scss']
   },
   module: {
     loaders: [
@@ -75,15 +75,6 @@ let common = {
           'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]',
           'postcss-loader',
           'sass-loader'
-        ],
-        include: PATHS.src
-      },
-      {
-        test: /\.css$/,
-        loaders: [
-          'style-loader',
-          'css-loader',
-          'postcss-loader'
         ],
         include: PATHS.src
       }
@@ -123,15 +114,15 @@ else if (ENV === 'production') {
     loaders: common.module.loaders.map(function(loader) {
       if (loader.loaders.indexOf('style-loader') !== -1) {
         loader.loader = ExtractTextPlugin.extract(
-          'style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]',
-          'postcss-loader'
+          'style-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]!postcss-loader!sass-loader'
         );
       }
       return loader;
     }),
     plugins: [
       new CleanPlugin([PATHS.build]),
-      new ExtractTextPlugin('[name].css'),
+      new ExtractTextPlugin('styles.css'),
       new webpack.optimize.CommonsChunkPlugin({
         names: ['vendor', 'manifest']
       }),
